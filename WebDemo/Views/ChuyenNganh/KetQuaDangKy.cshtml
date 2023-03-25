@@ -1,0 +1,45 @@
+﻿@model ManCityUnited.Models.PhieuDangKy
+
+@{
+    ViewBag.Title = "KetQuaDangKy";
+}
+
+<h2>KetQuaDangKy</h2>
+
+<div>
+    <h4>PhieuDangKy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mssv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mssv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChuyenNganh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChuyenNganh)
+        </dd>
+        <dt>
+            So nguoi dang ky giong ban: @ViewBag.sl
+        </dt>
+        <br />
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

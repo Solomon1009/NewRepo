@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Demo2.Models.Book>
+
+@{
+    ViewBag.Title = "Trang chủ";
+    int dem = 0;
+}
+
+<h2>Danh sách Book</h2>
+
+@foreach (var item in Model)
+{
+    dem++;
+    <div class="templatemo_product_box">
+        <h1>@item.Title</h1>
+        <img src="@item.Image" alt="image">
+        <div class="product_info">
+            <p>@item.Des</p>
+            <p>Tác Giả: <a href="/Product/AuthorDetails/@item.AuthorId">@item.Author</a></p>
+            <h2>Giá: @Demo2.Helpers.Utils.DocSoThanhChu((double)item.Price)</h2>
+            <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div>
+            <div class="detail_button"><a href="/Product/Details/@item.Id">Detail</a></div>
+        </div>
+        <div class="cleaner">&nbsp;</div>
+    </div>
+    if (dem % 2 == 1)
+    {
+        <div class="cleaner_with_width">&nbsp;</div>
+    }
+    else
+    {
+        <div class="cleaner_with_height">&nbsp;</div>
+    }
+}
+
+</table>

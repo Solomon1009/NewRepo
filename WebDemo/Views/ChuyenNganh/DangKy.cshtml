@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "DangKy";
+}
+
+<h2>Dang ky chuyen nganh</h2>
+
+<form action="/ChuyenNganh/LuuDangKy" method="post">
+    <div class="form-group">
+        <label for="hoten">Ho Ten:</label>
+        <input type="text" class="form-control" id="hoten" name="hoten">
+    </div>
+    <div class="form-group">
+        <label for="mssv">mssv:</label>
+        <input type="text" class="form-control" id="mssv" placeholder="VD:2011......." name="mssv">
+    </div>
+    <div class="form-group">
+        <label for="chuyennganh">Chuyen Nganh:</label>
+        <input type="text" class="form-control" id="chuyennganh" name="chuyennganh">
+    </div>
+    <button id="btn-DangKy" type="submit" class="btn btn-primary">Dang ky</button>
+</form>
+
+
+
